@@ -1,0 +1,40 @@
+﻿@model jobweb.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>الحذف الوظيفة</h2>
+
+<h3>هل تريد حذف الوظيفة؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoryDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoryDescription)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("العودة للقائمة", "Index",null,new {@class="btn btn-danger" })
+        </div>
+    }
+</div>

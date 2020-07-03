@@ -1,0 +1,21 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+
+    <div class="container" style="padding-top:30px">
+        <h2>التفاصيل </h2>
+        <h4>تفاصيل الصلاحية</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayName("اسم الصلاحية")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+        </dl>
+    </div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id }, new { @class = "btn btn-danger" })
+    @Html.ActionLink("عودة الى القائمة", "Index", null, new { @class = "btn btn-danger" })
+</p>

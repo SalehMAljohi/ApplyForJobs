@@ -1,0 +1,25 @@
+﻿@model IEnumerable<jobweb.Models.Job>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+    <div class="panel panel-default" style="padding: 0px 15px 15px 15px;">
+        <h2 class=" panel-header alert-danger">نتائج البحث</h2>
+        @*@foreach (var item in Model)
+        {
+            <h5>@item.Category.CategoryName</h5>
+        }*@
+        <div class="row">
+            @foreach (var subitem in Model)
+            {
+                <div class="col-md-4 thumbnail" style="margin-left:20px;margin-bottom:30px;">
+                    <img src="~/Uploads/@Html.DisplayFor(m => subitem.JobImage)" style="width: auto;height: 300px; " />
+                    <h4>@subitem.JobName</h4>
+                    <h5>@subitem.JobContent</h5>
+                    @Html.ActionLink("التقديم السريع", "Details", new { JobId = subitem.Id }, new { @class = "btn btn-danger"})
+                </div>
+            }
+        </div>
+    </div>

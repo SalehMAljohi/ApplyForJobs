@@ -1,0 +1,114 @@
+﻿@font-face {
+    font-family: myfont1;
+    src: url('font/GE_SS_Two_Bold.otf');
+} /*this is to make your font*/
+@font-face{
+    font-family:myfont2;
+    src: url('font/DroidKufi-Regular.ttf')
+} /*this is to make your font*/
+
+body{
+    padding-top:30px;
+}  /*بعد النص عن توب حق المتصفح*/
+.navbar-default {
+    background-color: #d96d4b;
+    color:whitesmoke;
+} /*هذا لتغير لون الخلفية والخط بنسبة للنافيقاتور*/
+    .navbar-default .navbar-nav > li > a {
+        color: whitesmoke;
+    }
+        .navbar-default .navbar-nav > li > a:hover {
+            color: whitesmoke;
+        } /*هذا لتغير لون الخط بنسبة للنك عندما نكون علية للنافيقاتور*/
+.nav >i{
+    position:relative;
+    height:75px;
+    display:block;
+    padding-top:10px;
+}/*هذا لتحسين مكان الكلمات  بنسبة للنافيقاتور*/
+a.dropdown-toggle:hover{
+    color:antiquewhite ;
+    background-color:darkgray ;
+}
+li >a:hover {
+    color: antiquewhite;
+    background-color: darkgray;
+}
+ul.dropdown-menu{
+    color :black ;
+    background-color :antiquewhite;
+}
+.navbar-user
+{
+    padding :10px;
+    padding-bottom :0px;
+width :350px;
+
+}
+.myfooter {
+    background-color: #d59680;
+    font-family: myfont2;
+    padding-top: 10px;
+    text-align: justify;
+}/*هذا لتغير لون الخلفية والخط بنسبة فوتير*/
+.subfooter{
+    background-color:#d96d4b;
+    text-align:center;
+    padding:10px;
+    color:whitesmoke;
+}/*هذا لتغير لون الخلفية والخط بنسبة صبفوتير*/
+.myfooter a{
+    color:whitesmoke;
+}
+.myfooter p{
+   color:whitesmoke;
+}
+.myfooter h3,ul,p{
+    margin-bottom:20px;
+    font-family:myfont2;
+}
+.logo-size{
+    background-color:aqua;
+}/*حجم الوقو*/
+#searchName {
+    font-family: myfont2;
+    color:black ; 
+    width: 130px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url('../images/pointer-righta.png');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding: 12px 20px 12px 12px;
+    transition: width 0.4s ease-in-out;
+}
+#searchName:focus{
+    width :100%;
+}
+.img-font{
+    font-size :90px;
+}
+@media (min-width: 992px)  {
+    .col-md-4 {
+        width: 23%;
+    }
+}
+.panel-default > .panel-heading {
+    margin-top: 0px;
+    background-color: #f2dede;
+}
+@media screen and (min-width: 768px)  {
+    .container .jumbotron {
+        margin-bottom: 10px;
+    }
+}
+.login-form {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row {
+        margin-left: 0;
+        margin-right: 0;
+    }

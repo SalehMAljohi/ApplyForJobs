@@ -1,0 +1,54 @@
+﻿@model jobweb.Models.ApplyForJob
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>الحذف</h2>
+
+<h3>هل انت متاكد حذف هذه الوظيفة؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.jobs.JobName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobs .JobName )
+        </dd>
+
+        <dt>
+            @Html.DisplayName("اسم المستخدم")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplyDate)
+        </dt>
+
+        <dd>
+            @Model.ApplyDate
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("عودة الى القائمة", "GetJobByUser")
+        </div>
+    }
+</div>

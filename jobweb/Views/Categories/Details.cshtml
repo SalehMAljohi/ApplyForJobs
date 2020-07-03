@@ -1,0 +1,34 @@
+﻿@model jobweb.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>تفاصيل الوظيفة</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoryDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoryDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "Edit", new { id = Model.Id },new {@class="btn btn-danger" }) |
+    @Html.ActionLink("العودة للقائمة", "Index",null,new {@class="btn btn-danger" })
+</p>
